@@ -20,6 +20,7 @@ namespace AcademiaApp
     /// </summary>
     public partial class MainWindow : Window
     {
+        private Academia A;
         public MainWindow()
         {
             InitializeComponent();
@@ -27,7 +28,7 @@ namespace AcademiaApp
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Academia A = new Academia(txtAcadNome.Text, txtAcadEnde.Text);
+            A = new Academia(txtAcadNome.Text, txtAcadEnde.Text);
             txtEspo.Items.Add(A.ToString());
             txtAcadNome.Text = String.Empty;
             txtAcadEnde.Text = String.Empty;
@@ -35,13 +36,15 @@ namespace AcademiaApp
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            Academia A = new Academia(txtAcadNome.Text, txtAcadEnde.Text);
             Esporte infos = new Esporte(txtEspNome.Text, txtEspHora.Text, double.Parse(txtEspMens.Text));
             A.Inserir(infos);
             txtEspNome.Text = String.Empty;
             txtEspHora.Text = String.Empty;
             txtEspMens.Text = String.Empty;
-            
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
             foreach (Esporte modalidades in A.Listar())
             {
                 txtEspo.Items.Add(modalidades);
