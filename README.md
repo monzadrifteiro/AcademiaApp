@@ -2,8 +2,8 @@
 
 ## Info
 
-- Nome do projeto: *AcademiaApp*
-- Objetivo: Projeto desenvolvido como parte da avaliação da disciplina *Programação Estruturada e Orientada a Objetos* do curso técnico integrado em Informática Para Internet
+- Nome do projeto: AcademiaApp
+- Objetivo: Projeto desenvolvido como parte da avaliação da disciplina **Programação Estruturada e Orientada a Objetos** do curso técnico integrado em Informática Para Internet
 - Participantes:
   - [Lucas de Lima Nunes Fernandes](https://github.com/monzadrifteiro/)
   - [Kauã Batista Ribeiro de Souza](https://github.com/kuabrs/)
