@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -37,6 +37,7 @@ namespace AcademiaApp
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             Esporte infos = new Esporte(txtEspNome.Text, txtEspHora.Text, double.Parse(txtEspMens.Text));
+            A.media += double.Parse(txtEspMens.Text);
             A.Inserir(infos);
             txtEspNome.Text = String.Empty;
             txtEspHora.Text = String.Empty;
@@ -47,8 +48,11 @@ namespace AcademiaApp
         {
             foreach (Esporte modalidades in A.Listar())
             {
+                A.quantidade++;
                 txtEspo.Items.Add(modalidades);
             }
+
+            txtEspo.Items.Add($"Sua média mensal é: {A.MediaMensalidade():0.00}");
         }
     }
 }
