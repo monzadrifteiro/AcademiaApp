@@ -11,5 +11,5 @@
 ## Observações
 
 - Inserir primeiramente as informações da academia e somente após isso inserir as dos esportes
-- Utilizar **somente números**na entrada de "Mensalidades"
+- Utilizar **somente números** na entrada de "Mensalidades"
 - Clicar em "Finalizar" após concluir o cadastramento de todos os esportes
