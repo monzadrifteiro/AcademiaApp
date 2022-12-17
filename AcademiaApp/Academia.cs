@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,22 +8,32 @@ namespace AcademiaApp
 {
     class Academia
     {
+        private int aux = 1;
         private string nome;
         private string endereco;
         private Esporte[] esportes;
         private int contador;
+        public double media;
+        public int quantidade;
         public Academia(string nome, string endereco)
         {
             this.nome = nome;
             this.endereco = endereco;
-            esportes = new Esporte[5];
+            esportes = new Esporte[aux];
         }
         public void Inserir(Esporte e)
         {
-            if (contador < 5)
+            if (contador == aux)
+            {
+                Array.Resize(ref esportes, esportes.Length + 1);
+                aux++;
+
+            }
+            if (contador < aux)
             {
                 esportes[contador] = e;
                 contador++;
+
             }
         }
         public Esporte[] Listar()
@@ -32,9 +42,9 @@ namespace AcademiaApp
             Array.Copy(esportes, i, contador);
             return i;
         }
-        //public double MediaMensalidade() {
-        //  
-        //}
+        public double MediaMensalidade() {
+            return media/quantidade;
+        }
         public override string ToString()
         {
             return $"{nome} - {endereco}";
